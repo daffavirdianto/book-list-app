@@ -154,12 +154,13 @@ function BooksPage() {
                         </div>
                         <div className="mb-3">
                             <DatePicker
-                                selected={form.publication_date ? new Date(form.publication_date) : null}
+                                selected={form.publication_date ? new Date(form.publication_date.split("-").reverse().join("-")) : null}
                                 onChange={(date) =>
-                                    setForm({ ...form, publication_date: date.toISOString().slice(0, 10) })
+                                    setForm({ ...form, publication_date: date.toISOString().slice(0, 10).split("-").reverse().join("-") })
                                 }
                                 className="form-control"
                                 placeholderText="Publication Date"
+                                dateFormat="dd-MM-yyyy"
                             />
                         </div>
                         <div className="mb-3">
