@@ -36,7 +36,7 @@ This is the backend API for the Book List App. It provides endpoints to manage b
     - Configure the `.env` file with your database credentials.
     - Run migrations:
       ```bash
-      php artisan migrate
+      php artisan migrate --seed
       ```
 
 5. Start the development server:
