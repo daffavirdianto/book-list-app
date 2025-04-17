@@ -31,15 +31,22 @@ This is the backend API for the Book List App. It provides endpoints to manage b
     ```bash
     composer install
     ```
-4. Set up the database:
+4. Set up env:
+   - Configure the `.env`.
+    ```bash
+    cp .env.example .env
+    ```
+    ```bash
+    php artisan key:generate
+    ```
+6. Set up the database:
     - Create a MySQL database.
-    - Configure the `.env` file with your database credentials.
     - Run migrations:
       ```bash
       php artisan migrate --seed
       ```
 
-5. Start the development server:
+7. Start the development server:
     ```bash
     php artisan serve
     ```
